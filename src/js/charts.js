@@ -323,6 +323,17 @@ function createTimeSeries(array, div) {
   });
   var dateArray = [...dateSet];
 
+  //minimize dates
+  let shortDateArray = [];
+  let count = 0;
+  for (i in dateArray) {
+    if (count==4) {
+      shortDateArray.push(dateArray[i]);
+      count = 0;
+    }
+    count++;
+  }
+
 	var chart = c3.generate({
     size: {
       width: chartWidth,
@@ -358,8 +369,8 @@ function createTimeSeries(array, div) {
 				type: 'timeseries',
 				tick: {
           outer: false,
-          values: dateArray,
-          format: function(d, i) {
+          values: shortDateArray,
+          format: function(d) {
             var date = chartDateFormat(d);
             date = (d.getMonth()%3==0) ? date : '';
             return date;
@@ -585,6 +596,7 @@ function createRankingChart() {
 
   //format data
   rankingData = formatRankingData(indicator, d3.select('#vaccineSortingSelect').node().value);
+  console.log('rankingData',rankingData)
 
   var valueMax = d3.max(rankingData, function(d) { return +d.value; });
   valueFormat = d3.format(',.0f');

@@ -1066,7 +1066,6 @@ table.immunization-table {
 	overflow: hidden;
 	padding: 20px 30px 30px;
 	position: absolute;
-	top: 0;
 	left: -416px;
 	width: 416px;
 	z-index: 3;
@@ -1274,6 +1273,21 @@ table.immunization-table {
     right: 10px;
     top: 10px;
   }
+}
+
+.alert-message {
+	background-color: #FDE9E8;
+	border: 1px solid #F2645A;
+	color: #000;
+	font-size: 16px;
+	text-align: center;
+	a {
+		color: #F2645A;
+	}
+	p {
+		margin: 0;
+		padding: 20px;
+	}
 }
 
 #chart-view {

@@ -1491,7 +1491,7 @@ function createCountryMapTooltip(adm1_code) {
     if (val!=undefined && val!='' && !isNaN(val)) {
       if (currentCountryIndicator.id.indexOf('pct')>-1) val = (val>1) ? percentFormat(1) : percentFormat(val);
       if (currentCountryIndicator.id=='#population' || currentCountryIndicator.id=='#affected+food+ipc+p3plus+num' || currentCountryIndicator.id=='#affected+ch+food+p3plus+num') val = shortenNumFormat(val);
-      if (currentCountryIndicator.id=='#affected+idps+ind') val = numFormat(val);
+      if (currentCountryIndicator.id=='#affected+idps+ind' || currentCountryIndicator.id=='#loc+count+health') val = numFormat(val);
     }
     else {
       val = 'No Data';

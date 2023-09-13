@@ -52,10 +52,11 @@ $( document ).ready(function() {
     //set content sizes based on viewport
     $('.secondary-panel').height(viewportHeight-40);
     $('.content').width(viewportWidth + $('.content-left').innerWidth());
-    $('.content').height(viewportHeight);
+    $('.content').height(viewportHeight - $('.alert-message').outerHeight());
     $('.content-right').width(viewportWidth);
-    $('#chart-view').height(viewportHeight-$('.tab-menubar').outerHeight()-30);
-    $('.country-panel .panel-content').height(viewportHeight - $('.country-panel .panel-content').position().top);
+    $('#chart-view').height(viewportHeight - $('.tab-menubar').outerHeight() - 30);
+    $('.country-panel').height($('.content').height() - 50);
+    $('.country-panel .panel-content').height($('.country-panel').height() - $('.country-panel .panel-content').position().top + 50);
     $('.map-legend.global, .map-legend.country').css('max-height', viewportHeight - 200);
     if (viewportHeight<696) {
       zoomLevel = 1.4;
