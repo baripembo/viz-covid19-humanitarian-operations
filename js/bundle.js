@@ -1683,8 +1683,8 @@ function transitionBarChart(data){
 
 
 function vizTrack(view, content) {
-  mpTrack(view, content);
-  gaTrack('viz interaction hdx', 'switch viz', 'oad covid-19', content);
+  // mpTrack(view, content);
+  // gaTrack('viz interaction hdx', 'switch viz', 'oad covid-19', content);
 }
 
 function mpTrack(view, content) {
@@ -3841,7 +3841,7 @@ $( document ).ready(function() {
   function getData() {
     console.log('Loading data...')
     Promise.all([
-      d3.json('https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-covid-viz/master/out.json'),
+      d3.json('data/out.json'), //https://raw.githubusercontent.com/OCHA-DAP/hdx-scraper-covid-viz/master/out.json
       d3.json('data/ocha-regions-bbox.geojson')
     ]).then(function(data) {
       console.log('Data loaded');
@@ -4145,5 +4145,5 @@ $( document ).ready(function() {
   }
 
   init();
-  initTracking();
+  //initTracking();
 });
