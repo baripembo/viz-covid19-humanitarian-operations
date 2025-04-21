@@ -6,19 +6,3 @@
 > Contact us at [hdx@un.org](mailto:hdx@un.org) with questions or feedback.
 
 The Centre for Humanitarian Data's Covid-19 data explorer pulls data from over 20 sources to help understand the progress of coronavirus and its impact on already vulnerable people in 63 countries that have a refugee or humanitarian operation.
-
-### Set up
-* Check out the repository
-* Run `npm install`
-
-### Build the project
-`npm run build`
-
-### Start the local server
-`npm start`
-
-### Run watch for automatic updates during development
-`npm run watch`
-
-### Deploy
-`npm run deploy`
